@@ -1,0 +1,32 @@
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Editor de código
+.vscode/
+.idea/
+
+# Logs e backups
+*.log
+*.bak
+*.tmp
+
+# Arquivos temporários
+*.swp
+*.swo
+
+# Node.js (caso use futuramente)
+node_modules/
+
+# Build/output
+dist/
+build/
+
+# Ambiente Python (se usar)
+__pycache__/
+*.pyc
+.env
+
+# Outros
+.env.local
+.env.*.local
