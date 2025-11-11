@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Regras do Apartamento</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background-color: #FFFEFA;
+      color: #3A3335;
+    }
+
+    /* MENU LATERAL */
+    aside {
+      width: 220px;
+      background-color: #f7d932;
+      height: 100vh;
+      position: fixed;
+      border-right: 1px solid #989C94;
+      padding: 30px 20px;
+    }
+
+     nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+nav ul li {
+  width: 100%;
+}
+
+nav a {
+  text-decoration: none;
+  color: #1A1423;
+  font-weight: bold;
+  padding: 8px 12px; /* mantém altura igual para todos os links */
+  display: block;
+  transition: color 0.3s, background-color 0.3s;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+nav a.ativo {
+  background-color: #ffe65b;
+  color: #ffffff;
+}
+
+
+    nav a:hover {
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 5px;
+    }
+
+    /* HERO / IMAGEM DE FUNDO */
+    .hero {
+      margin-left: 220px;
+      height: 300px;
+      background-image: url("https://a0.muscache.com/im/pictures/f358ea58-c228-456d-a1b0-ebad35be9ea3.jpg?im_w=720");
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+
+        nav a.ativo {
+      background-color: #1A1423; /* retângulo escuro */
+      color: #ffffff; /* texto branco */
+      padding: 8px 12px;
+      border-radius: 5px;
+    }
+
+    nav a.reserve {
+      animation: piscar 1s infinite;
+    }
+
+    @keyframes piscar {
+      0%, 50%, 100% { color: #1A1423; }
+      25%, 75% { color: #ffffff; }
+    }
+
+    /* CONTEÚDO PRINCIPAL */
+    main {
+      margin-left: 220px;
+      padding: 40px;
+      max-width: 900px;
+    }
+
+    main .section {
+      margin-bottom: 40px;
+    }
+
+    main h2 {
+      background-color: #f7d932;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 1.8rem;
+      color: #1A1423;
+      margin-bottom: 15px;
+    }
+
+    main p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    main ul {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    main ul li {
+      margin-bottom: 10px;
+    }
+
+    /* RODAPÉ */
+    footer {
+      margin-left: 220px;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #1A1423;
+      background-color: #f7d932;
+      border-top: 1px solid #989C94;
+    }
+
+    footer a {
+      color: #1A1423;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    /* RESPONSIVO */
+    @media (max-width: 768px) {
+      aside {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #989C94;
+      }
+
+      .hero {
+        margin-left: 0;
+        height: 200px;
+        font-size: 2rem;
+      }
+
+      main,
+      footer {
+        margin-left: 0;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- MENU LATERAL -->
+  <aside>
+    <h2>Menu</h2>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="reserva.html" class="reserve">Reservas</a></li>
+        <li><a href="comodos.html">Cômodos</a></li>
+        <li><a href="regras.html" class="ativo">Regras</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- HERO -->
+  <section class="hero">
+    Regras do Apartamento
+  </section>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main>
+    <div class="section">
+      <h2>Regras da Casa</h2>
+      <p><strong>Lembre-se de que você vai estar na casa de alguém, por isso, trate o espaço com cuidado e respeito.</strong></p>
+      <ul>
+        <li>Check-in: 15:00 - 22:00</li>
+        <li>Checkout: até 10:00</li>
+        <li>Self check-in com teclado com senha</li>
+        <li>Máximo de 5 hóspedes</li>
+        <li>Permitido animais de estimação</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Segurança e Propriedade</h2>
+      <p><strong>Evite surpresas ao conferir estas informações importantes sobre a propriedade:</strong></p>
+      <ul>
+        <li>Não há alarme de fumaça</li>
+        <li>Detector de monóxido de carbono não é necessário</li>
+        <li>Todos os aparelhos são elétricos — sem gás, óleo ou madeira</li>
+        <li>Self check-in com teclado com senha</li>
+        <li>O apartamento está no segundo andar — é necessário subir escadas</li>
+      </ul>
+    </div>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <p>Venha se hospedar neste apartamento! Acesse nosso Airbnb: 
+      <a href="https://www.airbnb.com.br/rooms/29630685?viralityEntryPoint=1&s=76" target="_blank">Clique aqui</a>.
+    </p>
+  </footer>
+
+</body>
+</html>

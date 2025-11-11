@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cômodos do Apartamento</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background-color: #FFFEFA;
+      color: #3A3335;
+    }
+
+    aside {
+      width: 220px;
+      background-color: #f7d932;
+      height: 100vh;
+      position: fixed;
+      border-right: 1px solid #989C94;
+      padding: 30px 20px;
+    }
+
+    nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+nav ul li {
+  width: 100%;
+}
+
+nav a {
+  text-decoration: none;
+  color: #1A1423;
+  font-weight: bold;
+  padding: 8px 12px; /* mantém altura igual para todos os links */
+  display: block;
+  transition: color 0.3s, background-color 0.3s;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+nav a.ativo {
+  background-color: #ffe65b;
+  color: #ffffff;
+}
+
+
+
+    nav a:hover {
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 5px;
+    }
+
+    /* BACKGROUND IMAGE */
+    .bgimg {
+      margin-left: 220px;
+      height: 60vh;
+      background-image: url("https://a0.muscache.com/im/pictures/ea447b2d-d535-495a-afbd-f4eb242026c7.jpg?im_w=1200");
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .bgimg h1 {
+      color: white;
+      font-size: 3rem;
+      background: rgba(26, 20, 35, 0.6);
+      padding: 15px;
+      border-radius: 10px;
+      border: 2px solid #989C94;
+    }
+
+    nav a.ativo {
+  background-color: #1A1423; /* retângulo escuro */
+  color: #ffffff; /* texto branco */
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+
+    nav a.reserve {
+      animation: piscar 1s infinite;
+    }
+
+    @keyframes piscar {
+      0%, 50%, 100% { color: #1A1423; }
+      25%, 75% { color: #ffffff; }
+    }
+
+    /* CONTEÚDO PRINCIPAL */
+    main {
+      margin-left: 220px;
+      padding: 40px;
+      max-width: 900px;
+    }
+
+    main h2 {
+      background-color: #f7d932;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 1.8rem;
+      color: #1A1423;
+      margin-bottom: 15px;
+    }
+
+    main p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+        .cozinha {
+  display: flex;
+  flex-wrap: wrap; /* permite quebrar linha */
+  justify-content: center; /* centraliza horizontalmente */
+  gap: 10px; /* espaço entre imagens */
+}
+
+.cozinha img {
+  width: 48%; /* duas primeiras ocupam metade cada */
+  max-width: 300px; /* opcional, limita tamanho */
+}
+
+.cozinha img:nth-child(3) {
+  width: 48%; /* mesma largura das duas de cima */
+  flex-basis: 100%; /* força quebrar linha */
+  margin-top: 10px;
+  align-self: center; /* centraliza a terceira imagem */
+}
+
+    /* GALERIA DE IMAGENS */
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .galeria img {
+      width: calc(50% - 10px);
+      max-width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    /* RODAPÉ */
+    footer {
+      margin-left: 220px;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #1A1423;
+      background-color: #f7d932;
+      border-top: 1px solid #989C94;
+    }
+
+    footer a {
+      color: #1A1423;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    /* RESPONSIVO */
+    @media (max-width: 768px) {
+      aside {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #989C94;
+      }
+
+      .hero {
+        margin-left: 0;
+        height: 200px;
+        font-size: 2rem;
+      }
+
+      main,
+      footer {
+        margin-left: 0;
+        padding: 20px;
+      }
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <!-- MENU LATERAL -->
+  <aside>
+    <h2>Menu</h2>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="reserva.html" class="reserve">Reservas</a></li>
+        <li><a href="comodos.html" class="ativo">Cômodos</a></li>
+        <li><a href="regras.html">Regras</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- IMAGEM DE FUNDO COM TÍTULO -->
+  <section class="bgimg">
+    <h1>Cômodos do Apartamento</h1>
+  </section>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main>
+    <section>
+      <h2>Sala de Estar</h2>
+      <p>Sofá-cama, ar-condicionado, TV, ventilador de teto, livros e material de leitura.</p>
+      <div class="galeria">
+        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-29630685/original/c8b0090b-b75e-49bc-ab80-5072fb657248.jpeg">
+        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-29630685/original/b87c7e5e-118a-42a5-9278-a23954ec84eb.jpeg">
+      </div>
+    </section>
+
+    <section>
+      <h2>Cozinha</h2>
+      <p>Assadeira, cafeteira, chaleira, fogão, forno, liquidificador, louças, microondas, refrigerador, taças de vinho, torradeira e utensílios para churrasco.</p>
+      <div class="galeria">
+        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-29630685/original/e0fb420c-4e6b-46df-974e-16e3b5a4e7cf.jpeg">
+        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-29630685/original/711575f7-542d-4379-aad4-9209b1bb81d1.jpeg">
+        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-29630685/original/7a24fd34-495a-421a-b017-afd2ec75eb19.jpeg">
+      </div>
+    </section>
+
+    <section>
+      <h2>Área de Jantar</h2>
+      <p>Ar-condicionado, mesa de jantar, taças de vinho.</p>
+      <div class="galeria">
+        <img src="https://a0.muscache.com/im/pictures/04649463-5815-4cf0-8ed3-8275e8a35fd6.jpg">
+        <img src="https://a0.muscache.com/im/pictures/miso/Hosting-29630685/original/59016f61-a74e-42e7-b179-7c7d2cef71f2.jpeg">
+      </div>
+    </section>
+
+    <section>
+      <h2>Quarto</h2>
+      <p>Cama queen, cama de solteiro, ar-condicionado, blackout, cabides, ferro de passar, guarda-roupa, roupa de cama.</p>
+      <div class="galeria">
+        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-29630685/original/f4a4317d-3f69-4721-8d1b-e69f9c1a68fd.jpeg">
+        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-29630685/original/93115c7b-ff15-47b7-a970-6c8190ed0096.jpeg">
+      </div>
+    </section>
+
+    <section>
+      <h2>Banheiro</h2>
+      <p>Sabonete para o corpo, secador de cabelo, água quente.</p>
+      <div class="galeria">
+       <img src="https://a0.muscache.com/im/pictures/a48554e5-9998-478e-9907-22193a8ff201.jpg"> 
+       <img src="https://a0.muscache.com/im/pictures/35a78d4c-23f9-4121-89d2-093fd1b5864d.jpg">
+      </div>
+    </section>
+
+    <section>
+      <h2>Escritório</h2>
+      <p>Espaço tranquilo para trabalho remoto, com mesa e cadeira confortáveis.</p>
+      <div class="galeria">
+        <img src="https://cdn.glitch.global/8634cd99-e49d-4dbb-a7ea-11b73a1c6071/thumbnails%2F58342fdd-8f74-45cf-a27c-d08c05b411a3.image.png?1741307350508" alt="Imagem do escritório">
+      </div>
+    </section>
+
+    <section>
+      <h2>Área de Lavanderia</h2>
+      <p>Máquina de lavar, varal, produtos de limpeza e espaço funcional para cuidados com roupas.</p>
+      <div class="galeria">
+        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-29630685/original/ed8147a6-b844-4975-8d94-25833b3289b4.jpeg" alt="Lavanderia">
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer mantido -->
+  <footer>
+    <p>Venha se hospedar neste apartamento! Acesse nosso Airbnb: 
+      <a href="https://www.airbnb.com.br/rooms/29630685?viralityEntryPoint=1&s=76" target="_blank">Clique aqui</a>.
+    </p>
+  </footer>
+
+</body>
+</html>
